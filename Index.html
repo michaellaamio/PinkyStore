@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sleek Dashboard - Free Bootstrap 4 Admin Dashboard Template and UI Kit. It is very powerful bootstrap admin dashboard, which allows you to build products like admin panels, content management systems and CRMs etc.">
+
+    <title>Sign In - Pinky Store</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet" />
+    <link href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <!-- SLEEK CSS -->
+    <link id="sleek-css" rel="stylesheet" href="~/css/sleek.css"/>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #DD5E89, #F7BB97); /* Updated background gradient */
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #495057;
+        }
+
+        .container {
+            background: linear-gradient(to right, #DD5E89, #F7BB97); /* Updated background gradient */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+        }
+
+        .card-header {
+            background: linear-gradient(to right, #DD5E89, #F7BB97); /* Updated background gradient */
+            text-align: center;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+            .card-header span {
+                font-size: 30px;
+                font-weight: 700;
+                background: linear-gradient(to right, #DD5E89, #F7BB97); /* Updated background gradient */
+                padding: 10px 20px;
+                border-radius: 10px;
+                display: inline-block;
+                text-align: center;
+                color: white;
+            }
+
+        .card-body {
+            padding: 30px;
+        }
+
+            .card-body h4 {
+                font-size: 24px;
+                margin-bottom: 30px;
+                text-align: center;
+                color: #DD5E89; /* Updated text color */
+            }
+
+        .form-control {
+            border: 1px solid #F7BB97; /* Updated border color */
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+            .form-control:focus {
+                border-color: #DD5E89; /* Updated border color */
+                box-shadow: none;
+            }
+
+        .btn-primary {
+            background: linear-gradient(to right, #DD5E89, #F7BB97); /* Updated background gradient */
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background: #DD5E89; /* Updated background color */
+                transform: scale(1.05);
+            }
+
+        .control-checkbox .control-indicator {
+            border-radius: 50%;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <span class="brand-name">Pinky Store</span>
+            </div>
+
+            <div class="card-body">
+                <h4 class="text-dark mb-5">Sign In</h4>
+
+                <form asp-controller="Access" asp-action="Login" method="post">
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control input-lg" asp-for="Email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input type="password" class="form-control input-lg" asp-for="PassWord" placeholder="Password">
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" asp-for="KeepLoggedIn">
+                        <label class="form-check-label" asp-for="KeepLoggedIn">Keep me logged in</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
